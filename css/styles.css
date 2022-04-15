@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff !important;
+  background-color: black !important;
+}
+.netflix-logo {
+  max-width: 96px;
+}
+.list-icon,
+.app-icon {
+  border: 1px solid #fff;
+  padding: 12px;
+}
+img {
+  transition: all 0.3s;
+}
+img:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5% !important;
+}
+.dark-bg {
+  background-color: black !important;
+}
+.main-body {
+  min-height: calc(100vh - 300px) !important;
+}
+.social-icons {
+  gap: 16px;
+}
+.dropdown-menu {
+  border-radius: 11px;
+  left: -100px !important;
+  background-color: black !important;
+}
+.dropdown-menu a {
+  color: #fff;
+}
+.icon {
+  font-size: 32px;
+}
+footer {
+  margin-top: 100px;
+}

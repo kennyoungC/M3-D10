@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin-bottom: 0 !important;
+}
+.netflix-logo {
+  max-width: 96px;
+}
+.dark-bg {
+  background-color: black !important;
+}
+.dropdown-menu {
+  border-radius: 11px;
+  left: -100px !important;
+  background-color: black !important;
+}
+.dropdown-menu a {
+  color: #fff;
+}
+.account-page {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.hr-settings {
+  background-color: #aaa;
+}
