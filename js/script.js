@@ -54,85 +54,49 @@ const displayMovies = async (genre) => {
 };
 
 const dropDown = document.querySelector(".genre-dropdown");
-dropDown.onclick = (e)=>{
-  if (e.target.classList.contains("dropdown")) {
-    const genre = e.target.innerText.toLowerCase();
-    console.log(genre);
-    const movieUrl =
-      "https://striveschool-api.herokuapp.com/api/movies/" + genre;
-    const response = await fetch(movieUrl, {
-      method: "GET",
-      headers,
-    });
-    const movies = await response.json();
-    console.log(movies);
-    const main = document.querySelector("main");
-    main.innerHTML = ``;
-    const section = document.createElement("section");
-    section.classList.add("container-fluid");
-
-    const h3 = document.createElement("h3");
-    h3.innerText = genre;
-    h3.classList.add("text-capitalize");
-    section.appendChild(h3);
-    const row = document.createElement("div");
-    row.classList.add("row");
-    movies.forEach((movie) => {
-      row.innerHTML += `
-
-      <div class="col-12 col-sm-6 col-md-4 mb-3 position-relative">
-      <div class="card">
-      <a href="details.html?id=${movie._id}"><img src="${movie.imageUrl}" class="card-img-top  " alt="..."></a>
-      </div>
-      <p class="mb-0 position-absolute title"><a class="text-decoration-none text-light" href="details.html?id=${movie._id}">${movie.name}</a></p>
-      </div>
-
-      `;
-      section.appendChild(row);
-    });
-    main.appendChild(section);
-  }
-}
 dropDown.addEventListener("click", async (e) => {
-  if (e.target.classList.contains("dropdown")) {
-    const genre = e.target.innerText.toLowerCase();
-    console.log(genre);
-    const movieUrl =
-      "https://striveschool-api.herokuapp.com/api/movies/" + genre;
-    const response = await fetch(movieUrl, {
-      method: "GET",
-      headers,
-    });
-    const movies = await response.json();
-    console.log(movies);
-    const main = document.querySelector("main");
-    main.innerHTML = ``;
-    const section = document.createElement("section");
-    section.classList.add("container-fluid");
+  try {
+    if (e.target.classList.contains("dropdown")) {
+      const genre = e.target.innerText.toLowerCase();
+      console.log(genre);
+      const movieUrl =
+        "https://striveschool-api.herokuapp.com/api/movies/" + genre;
+      const response = await fetch(movieUrl, {
+        method: "GET",
+        headers,
+      });
+      const movies = await response.json();
+      console.log(movies);
+      const main = document.querySelector("main");
+      main.innerHTML = ``;
+      const section = document.createElement("section");
+      section.classList.add("container-fluid");
 
-    const h3 = document.createElement("h3");
-    h3.innerText = genre;
-    h3.classList.add("text-capitalize");
-    section.appendChild(h3);
-    const row = document.createElement("div");
-    row.classList.add("row");
-    movies.forEach((movie) => {
-      row.innerHTML += `
-
-      <div class="col-12 col-sm-6 col-md-4 mb-3 position-relative">
-      <div class="card">
-      <a href="details.html?id=${movie._id}"><img src="${movie.imageUrl}" class="card-img-top  " alt="..."></a>
-      </div>
-      <p class="mb-0 position-absolute title"><a class="text-decoration-none text-light" href="details.html?id=${movie._id}">${movie.name}</a></p>
-      </div>
-
-      `;
-      section.appendChild(row);
-    });
-    main.appendChild(section);
+      const h3 = document.createElement("h3");
+      h3.innerText = genre;
+      h3.classList.add("text-capitalize");
+      section.appendChild(h3);
+      const row = document.createElement("div");
+      row.classList.add("row");
+      movies.forEach((movie) => {
+        row.innerHTML += `
+  
+        <div class="col-12 col-sm-6 col-md-4 mb-3 position-relative">
+        <div class="card">
+        <a href="details.html?id=${movie._id}"><img src="${movie.imageUrl}" class="card-img-top  " alt="..."></a>
+        </div>
+        <p class="mb-0 position-absolute title"><a class="text-decoration-none text-light" href="details.html?id=${movie._id}">${movie.name}</a></p>
+        </div>
+  
+        `;
+        section.appendChild(row);
+      });
+      main.appendChild(section);
+    }
+  } catch (error) {
+    console.log(error);
   }
 });
-
 const displayAll = document.querySelector(".all");
 displayAll.addEventListener("click", () => {
   window.location.assign("/");
