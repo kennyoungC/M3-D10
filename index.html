@@ -14,11 +14,26 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-
+    <style>
+      .title{
+        display: none;
+        font-size: 32px;
+        text-transform: capitalize;
+      }
+      .col-12:hover .title{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+      .title:hover{
+        cursor: pointer;
+      }
+    </style>
     <title>Netflix</title>
   </head>
   <body>
-<main>
+
   <nav class="navbar navbar-expand-lg navbar-dark dark-bg">
     <div>
       <a class="navbar-brand" href="index.html"
@@ -107,10 +122,12 @@
               </a>
             
               <div class="dropdown-menu dropdown-menu-dark genre-dropdown" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Sports</a>
-                <a class="dropdown-item" href="#">Horror</a>
-                <a class="dropdown-item" href="#">Comedy</a>
-                <a class="dropdown-item" href="#">Evil</a>
+                <a class="dropdown-item all " href="#">All</a>
+                <a class="dropdown-item dropdown" href="#">Sports</a>
+                <a class="dropdown-item dropdown" href="#">Horror</a>
+                <a class="dropdown-item dropdown" href="#">Comedy</a>
+                <a class="dropdown-item dropdown" href="#">Evil</a>
+                <a class="dropdown-item dropdown" href="#">Action</a>
               </div>
             </div>
           </div>
@@ -127,50 +144,67 @@
           </div>
         </div>
 </section>
+<main>
 <section class=" container-fluid mt-5">
-        <h3 class="mb-3 comedy-header">Trending Now</h3>
-        <div class="row comedy">
-          <!-- <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media0.webp" alt=""> </div>
-          <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media1.jpg" alt=""></div>
-          <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media2.webp" alt=""></div>
-          <div class="col-sm-3 col-md-3 col-lg-2"><img class="img-fluid w-100" src="./assets/media/media4.jpg" alt=""></div>
-          <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block"> <img class="img-fluid w-100" src="./assets/media/media5.webp" alt=""></div>
-          <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block "> <img class="img-fluid w-100" src="./assets/media/media6.jpg" alt=""></div> -->
+        <h3 class="mb-3 romantic-header">Trending Now</h3>
+        <div class="row romantic justify-content-center">
+          <div class="text-center ">
+            <div class="spinner-border " role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+         
         </div>
 </section>
 <section class="container-fluid  mt-5">
     <h3 class="mb-3 horror-header">Watch It Again</h3>
-    <div class="row horror">
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media19.webp" alt=""> </div>
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media20.jpg" alt=""></div>
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media21.webp" alt=""></div>
-      <div class="col-sm-3 col-md-3 col-lg-2"><img class="img-fluid w-100" src="./assets/media/media22.webp" alt=""></div>
-      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block"> <img class="img-fluid w-100" src="./assets/media/media5.webp" alt=""></div>
-      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block"> <img class="img-fluid w-100" src="./assets/media/media23.webp" alt=""></div>
+    <div class="row horror justify-content-center ">
+      <div class="text-center">
+        <div class="spinner-border " role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+     
   </div>
 </section>
 <section class=" container-fluid mt-5">
     <h3 class="mb-3 sports-header">New Releases</h3>
-    <div class="row sports">
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media32.jpg" alt=""> </div>
+    <div class="row sports justify-content-center">
+      <div class="text-center">
+        <div class="spinner-border " role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media32.jpg" alt=""> </div>
       <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media31.webp" alt=""></div>
       <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media30.jpg" alt=""></div>
       <div class="col-sm-3 col-md-3 col-lg-2"><img class="img-fluid w-100" src="./assets/media/media29.jpg" alt=""></div>
       <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block"> <img class="img-fluid w-100" src="./assets/media/media28.jpg" alt=""></div>
-      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block "> <img class="img-fluid w-100" src="./assets/media/media27.jpg" alt=""></div>
+      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block "> <img class="img-fluid w-100" src="./assets/media/media27.jpg" alt=""></div> -->
     </div>
 </section>
-<section class=" container-fluid mt-5">
+<!-- <section class=" container-fluid mt-5">
     <h3 class="mb-3 evil-header">New Releases</h3>
-    <div class="row evil">
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media32.jpg" alt=""> </div>
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media31.webp" alt=""></div>
-      <div class="col-sm-3 col-md-3 col-lg-2"> <img class="img-fluid w-100" src="./assets/media/media30.jpg" alt=""></div>
-      <div class="col-sm-3 col-md-3 col-lg-2"><img class="img-fluid w-100" src="./assets/media/media29.jpg" alt=""></div>
-      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block"> <img class="img-fluid w-100" src="./assets/media/media28.jpg" alt=""></div>
-      <div class="col-sm-3 col-md-0 col-lg-2 d-none d-lg-block "> <img class="img-fluid w-100" src="./assets/media/media27.jpg" alt=""></div>
+    <div class="row evil justify-content-center">
+      <div class="text-center">
+        <div class="spinner-border " role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+     
     </div>
-</section>
+</section> -->
+<!-- <section class=" container-fluid mt-5">
+    <h3 class="mb-3 action-header">New Releases</h3>
+    <div class="row action justify-content-center">
+      <div class="text-center">
+        <div class="spinner-border " role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+     
+    </div>
+</section> -->
 </main>
 <div class="container">
 <footer>
