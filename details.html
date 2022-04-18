@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .container img{
+        width: 100%;
+        max-height: 35vh;
+        object-fit: cover;
+      }
+    </style>
+    <title>Details</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark dark-bg">
+        <div>
+          <a class="navbar-brand" href="index.html"
+            ><img class="netflix-logo" src="./assets/netflix_logo.png" alt=""
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarScroll">
+          <ul
+            class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="max-height: 100px"
+          >
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="./backoffice.html">Upload Movie</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./details.html">Details Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">TV Shows</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <div><ion-icon class="lead pt-1 text-white" name="search"></ion-icon></div>
+            <p class="my-0 ml-3 text-white">KIDS</p>
+            <ion-icon  class="lead ml-3 text-white" name="notifications"></ion-icon>
+            <div class="d-flex">
+              <div class="dropdown mr-1">
+                <button type="button" class="ml-3 btn btn-dark dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+                   <img class="rounded" src="./assets/avatar.png" alt="a kid image"
+                     height="48px" width="48px">
+                </button>
+                <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuOffset">
+                  <a class="dropdown-item" href="profile.html">
+                    <div class="d-flex align-items-center">
+                    <img class="rounded" src="./assets/avatar.png" width="36px" alt=""> <p class="mb-0 ml-2">KENNETH</p>
+                  </div></a>
+                  <a class="dropdown-item" href="profile2.html">
+                    <div class="d-flex align-items-center">
+                    <img class="rounded" src="./assets/media/avatar.png" width="36px" alt=""> <p class="mb-0 ml-2">SILAS</p>
+                  </div></a>
+                  <a class="dropdown-item" href="profile3.html">
+                    <div class="d-flex align-items-center">
+                    <img class="rounded" src="./assets/media/avatar2.png" width="36px" alt=""> <p class="mb-0 ml-2">HERITAGE</p>
+                  </div></a>
+                  <a class="dropdown-item" href="profile4.html">
+                    <div class="d-flex align-items-center">
+                    <img class="rounded" src="./assets/media/avatar3.png" width="36px" alt=""> <p class="mb-0 ml-2">FAVOUR</p>
+                  </div></a>
+                  <a class="dropdown-item" href="#">
+                    <div class="d-flex align-items-center">
+                    <img class="rounded" src="./assets/kids_icon.png" width="36px" alt=""> <p class="mb-0 ml-2">KIDS</p>
+                  </div></a>
+                  <a class="dropdown-item" href="setting.html">SETTINGS</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log Out</a>
+                </div>
+              </div>
+            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+          </div>
+        </div>
+    </nav>
+    </div>
+    <section >
+<div class="container details">
+  <div class="text-center">
+    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <!-- <img src="https://via.placeholder.com/350" alt="">
+  <h1>harry potter</h1>
+  <span>description</span>
+  <p>Category</p>
+  <p>Uploaded:</p>
+  <p>Last Edited:</p>
+  <a class="btn btn-secondary">Edit Movie</a> -->
+</div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const id = new URLSearchParams(location.search).get("id")
+      
+      const headers = new Headers({
+  "Content-Type": "application/json",
+  Authorization:
+    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDgxN2M1ZWU3ODE4NzAwMTVjMjY3YTgiLCJpYXQiOjE2NDk5Njc2NjEsImV4cCI6MTY1MTE3NzI2MX0.bJ-a8RydRHuvCgXmMewdmveQbMkVWZnCshZjuA2SYwQ",
+});
+const url = "https://striveschool-api.herokuapp.com/api/movies/" + id;
+
+const displayEditPage = async ()=>{
+  
+const response = await fetch(url, {
+  method: "PUT",
+  headers
+})
+const movie = await response.json()
+const details = document.querySelector(".details")
+details.innerHTML= `<img src="${movie.imageUrl}" alt="">
+  <h1>${movie.name}</h1>
+  <h5 class="text-decoration-underline"> Movie Description: </h5>
+  <span>${movie.description}</span>
+  <p>${movie.category}</p>
+  <p>Uploaded: ${new Date(movie.createdAt).toLocaleString()}</p>
+  <p>Last Edited: ${new Date(movie.updatedAt).toLocaleString()}</p>
+  <a href="backoffice.html?id=${movie._id}" class="btn btn-secondary">Edit Movie</a>`
+}
+
+
+window.onload = ()=>{
+  displayEditPage()
+}
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

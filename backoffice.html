@@ -58,8 +58,8 @@
             <a class="nav-link" href="./backoffice.html">Upload Movie</a>
           </li>
           </li>
-          <li class="nav-item">
-            <a class="nav-link ">Recently Added</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="./details.html">Details Page</a>
           </li>
           <li class="nav-item">
             <a class="nav-link ">TV Shows</a>
@@ -112,30 +112,30 @@
         <hr />
         <div class="alert-box" role="alert"></div>
         <div class="col-10">
-          <form onsubmit="handleSubmit(event)">
+          <form onsubmit="AddMovies(event)">
             <div class="mb-3">
               <label for="name" class="form-label">Title</label>
-              <input type="text" class="form-control" id="name" required />
+              <input type="text" class="form-control" id="title" required />
             </div>
             <div class="mb-3">
-              <label for="product-description" class="form-label"
+              <label for="movie-description" class="form-label"
                 >Movie Description</label
               >
               <textarea
                 class="form-control"
-                id="product-description"
+                id="movie-description"
                 rows="3"
                 required
               ></textarea>
             </div>
             <div class="mb-3">
-              <label for="brand" class="form-label">Category (Genre)</label>
-              <input type="text" class="form-control" id="brand" required />
+              <label for="category" class="form-label">Category (Genre)</label>
+              <input type="text" class="form-control" id="category" required />
             </div>
            
             <div class="mb-3">
-              <label for="image" class="form-label">Movie Cover</label>
-              <input type="text" class="form-control" id="image" required />
+              <label for="movie-cover" class="form-label">Movie Cover</label>
+              <input type="text" class="form-control" id="movie-cover" required />
             </div>
             <button type="reset" class="btn btn-light">Reset</button>
             <button

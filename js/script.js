@@ -3,6 +3,7 @@ window.onload = () => {
   displayMovies("horror");
   displayMovies("comedy");
   displayMovies("evil");
+  displayMovies("sports");
 };
 const headers = new Headers({
   "Content-Type": "application/json",
@@ -25,16 +26,23 @@ const displayMovies = async (genre) => {
     movieGenre.innerHTML = ``;
     movies.forEach((movie) => {
       movieGenre.innerHTML += `
-    
-    <div class="col-12 col-sm-6 col-md-4 mb-3">
-    <div class="card">
-  <img src="${movie.imageUrl}" class="card-img-top  " alt="...">
- 
-</div>
-</div>
-`;
+      
+      <div class="col-12 col-sm-6 col-md-4 mb-3">
+      <div class="card">
+      <a href="details.html?id=${movie._id}"><img src="${movie.imageUrl}" class="card-img-top  " alt="..."></a>
+      </div>
+      </div>
+      `;
     });
   } catch (error) {
     console.log(error);
   }
 };
+
+const dropDown = document.querySelector(".genre-dropdown");
+dropDown.addEventListener("click", (e) => {
+  if (e.target.classList.contains("dropdown-item")) {
+    genre = e.target.innerText.toLowerCase();
+    displayMovies(genre);
+  }
+});
